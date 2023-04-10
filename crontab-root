@@ -1,0 +1,15 @@
+# renew certificate, run every day, renew if needed
+36 0 * * * "/root/.acme.sh"/acme.sh --cron --home "/root/.acme.sh" > /dev/null
+
+# backup database
+# mysql backup - rotating Monday-to-Saturday at 4AM - files: nextcloud-day-1.gz to nextcloud-day-6.gz
+0 9 * * 1-6 mysqldump --all-databases | gzip > /mnt/purple/ncdata/mysqldump/nextcloud-day-$(date +\%w).>
+# mysql backup - rotating past 4 weeks at 4AM all Sundays except first of month - files: nextcloud-week>
+# minute=0 hour=3 day=8-31 month=any/all day=0/Sunday
+0 9 8-31 * 0 mysqldump --all-databases | gzip > /mnt/purple/ncdata/mysqldump/nextcloud-week-$(expr $(da>
+# mysql backup - rotating 12 months of the year at 4AM only on first Sunday of the month - files: nextc>
+0 9 1-7 * 0 mysqldump --all-databases | gzip > /mnt/purple/ncdata/mysqldump/nextcloud-month-$(date +\%b>
+
+# sleep overnight
+# using script: /home/administrator/suspend_until.sh
+30 23 * * * /home/administrator/suspend_until.sh 07:15
