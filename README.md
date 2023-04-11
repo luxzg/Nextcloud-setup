@@ -1,7 +1,13 @@
 # Nextcloud-setup
-Guides, scripts and configs to help install and setup Nextcloud 26
+Guides, scripts and configs to help install and setup Nextcloud 26.
+
+Please see guide's [Introduction](https://github.com/luxzg/Nextcloud-setup/blob/main/%23guide.md#Introduction) for more details.
+
+## Guide
+Complete guide is now hosted [here](https://github.com/luxzg/Nextcloud-setup/blob/main/%23guide.md) in this very repository, as a markdown file.
 
 ## List of files
+- #guide.md - the complete guide
 - 00-installer-config.yaml - Netplan configuration with static IP
 - config.php - Nextcloud config, for v26, with everything from the guide
 - crontab-root - crontab contents of the "root" user
@@ -14,6 +20,3 @@ Guides, scripts and configs to help install and setup Nextcloud 26
 - redis.conf - changes to Redis configuration
 - snapper-ncdata - snapper config for ncdata btrfs volume
 - suspend_until.sh - script ran by crontab to suspend server each night & wake it each morning
-
-## Guide
-- coming tomorrow! in process of formatting to github markdown
