@@ -26,7 +26,7 @@
 
 [Check ports](#Check-ports)
 
-[Attach big HDD (8TB) for Data folder](Attach-big-HDD-8TB-for-Data-folder)
+[Attach big HDD (8TB) for Data folder](#Attach-big-HDD-8TB-for-Data-folder)
 
 [Nextcloud initial setup](#Nextcloud-initial-setup)
 
